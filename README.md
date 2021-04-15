@@ -66,3 +66,8 @@ Response:
   If we are to expand on this, we'll have to add packages for each module.
   Moving the APIs to a controller module would be a start.
 * The for loops can be further optimised. There are two iterations which can be avoided in the loops. It's only present on certain conditions.
+
+## User Interface Mock Ups
+![Search UI](https://raw.githubusercontent.com/shawnThottan/searcher/master/UI/Search.png)
+
+![Results UI](https://raw.githubusercontent.com/shawnThottan/searcher/master/UI/Result.png)
