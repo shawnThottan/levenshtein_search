@@ -11,10 +11,10 @@ public class Util {
         int shorterLen = shorterStr.length();
         int halfShorterLen = shorterLen / 2;
 
-        // Creates a character Array
+        // Creates a character Array charArr
         // If the longer string is `abcde` and the shorter string is `abcd`
-        // CharArr will be `..abcde..` (space replaced by `.`)
-        // half the length of the shorter string(2) spaces on both sides of the longer string.
+        // CharArr will be `  abcde  `
+        // added 2 spaces(half the length of the shorter string) on both sides of the longer string.
         int arrLen = longerLen + 2 * halfShorterLen;
         char[] charArr = new char[arrLen];
         for (int i = 0; i < arrLen; i++) {
@@ -30,12 +30,12 @@ public class Util {
         // assume the levenshtein Distance to be maximum at first.
         int levenshteinDistance = longerLen;
 
-        // runs a loop for characters in `..abc`
+        // for each position in the charArr
         for (int i = 0; i < arrLen - shorterLen; i++) {
             // start with assigning the minimum LD to dis
             int dis = minLD;
             for (int j = 0; j < shorterLen; j++) {
-                // when the characters are uncommon we add 1 to dis
+                // when the characters are different we add 1 to dis
                 if (charArr[i + j] != shorterStr.charAt(j)) { dis++; }
                 // when dis is greater than the existing best distance, we break from the loop.
                 if (dis >= levenshteinDistance) { break; }
