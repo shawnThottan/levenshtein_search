@@ -1,5 +1,6 @@
 # Searcher
 A simple Java Bootstrap application that searches for a string using the [levenshtein algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance) and returns the count and similar words.
+Go [here](https://searcher-maven.herokuapp.com/?text=Word&word=word) to try out the server
 
 ## Requirements
 
