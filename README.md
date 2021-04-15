@@ -57,7 +57,11 @@ Response:
 ```
 
 ## External Libraries used
-* [Lombok](https://projectlombok.org/)
+* [Lombok](https://projectlombok.org/) - Used to simplify the code at the model package.
+  The constructor, Getters and Setters are set from Lombok.
 
 ## Improvements to be made
-* The algorithm implemented can be further improved. The current algorithm calculates the distance by subtracting the number of common characters from the maximum levenshtein distance. Counting the difference would make the code more efficient.
+* The structure of the project is made for a single api application.
+  If we are to expand on this, we'll have to add packages for each module.
+  Moving the APIs to a controller module would be a start.
+* The for loops can be further optimised. There are two iterations which can be avoided in the loops. It's only present on certain conditions.
