@@ -30,11 +30,14 @@ public class SearcherApplication {
             return new ResponseEntity<>("Error: Parameter 'text' is empty", HttpStatus.BAD_REQUEST);
         }
 
-        String word = request.getWord();
+        String wordParam = request.getWord();
         // Checks if the word parameter is present
-        if (word == null || word.length() == 0) {
+        if (wordParam == null || wordParam.length() == 0) {
             return new ResponseEntity<>("Error: Parameter 'word' is empty", HttpStatus.BAD_REQUEST);
         }
+
+        // Removes the spaces from the word parameter before searching.
+        String word = String.join("", wordParam.split(" "));
 
         // sets the default value for MaxLevenshteinDistance
         if (request.getMaxLevenshteinDistance() == null) {
