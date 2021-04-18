@@ -37,6 +37,8 @@ public class Util {
             for (int j = 0; j < shorterLen; j++) {
                 // when the characters are different we add 1 to dis
                 if (charArr[i + j] != shorterStr.charAt(j)) { dis++; }
+                // if the character is a space, add 1 again.
+                if (charArr[i + j] == ' ') { dis ++; }
                 // when dis is greater than the existing best distance, we break from the loop.
                 if (dis >= levenshteinDistance) { break; }
             }
